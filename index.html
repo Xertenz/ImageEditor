@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- <script src="js/vue.js"></script> -->
+    <title>Home Page</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="container">
+        <h2 class="title">Image Editing</h2>
+        <div class="content">
+          <div class="img-wrapper">
+            <div class="file-wrapper">
+              <input type="file" id="file-to-upload" /><br />
+            </div>
+            <hr />
+            <div class="edit-img-wrapper">
+              <canvas width="0" height="0" id="canvas"></canvas>
+              <img id="image-to-edit" />
+            </div>
+          </div>
+          <div class="control-wrapper">
+            <div class="text-wrapper">
+              <p>Settings</p>
+            </div>
+            <hr />
+            <div class="ranges-wrapper">
+              <div class="grayscale">
+                <label for="grayscale">Grayscale</label><br />
+                <input type="range" id="grayscale" data-reset="0" disabled />
+              </div>
+              <div class="blur">
+                <label for="blur">Blur</label>
+                <input type="range" id="blur" data-reset="0" disabled />
+              </div>
+              <div class="hue-rotate">
+                <label for="hue-rotate">Hue Rotate</label>
+                <input
+                  type="range"
+                  id="hue-rotate"
+                  data-reset="0"
+                  min="0"
+                  max="360"
+                  disabled
+                />
+              </div>
+              <div class="invert">
+                <label for="invert">Invert</label>
+                <input type="range" id="invert" data-reset="0" disabled />
+              </div>
+              <div class="sepia">
+                <label for="sepia">Sepia</label>
+                <input type="range" id="sepia" data-reset="0" disabled />
+              </div>
+              <div class="brightness">
+                <label for="brightness">Brightness</label>
+                <input type="range" id="brightness" data-reset="100" disabled />
+              </div>
+              <div class="contrast">
+                <label for="contrast">Contrast</label>
+                <input type="range" id="contrast" data-reset="100" disabled />
+              </div>
+
+              <div class="saturate">
+                <label for="saturate">Saturate</label>
+                <input type="range" id="saturate" data-reset="100" disabled />
+              </div>
+            </div>
+            <hr />
+            <br />
+            <div class="flipping">
+              <div class="flip noflip">
+                <input
+                  type="checkbox"
+                  name="flip"
+                  id="flip-n"
+                  checked
+                  value="n"
+                  disabled
+                />
+                <label for="flip-n">No Flip</label>
+              </div>
+              <div class="flip horizontal">
+                <input
+                  type="checkbox"
+                  name="flip"
+                  id="flip-h"
+                  value="h"
+                  disabled
+                />
+                <label for="flip-h">Flip Horizontal</label>
+              </div>
+              <div class="flip vertical">
+                <input
+                  type="checkbox"
+                  name="flip"
+                  id="flip-v"
+                  value="v"
+                  disabled
+                />
+                <label for="flip-v">Flip Vertical</label>
+              </div>
+            </div>
+            <div class="btns">
+              <button class="btn btn-reset" disabled>Reset</button>
+              <button class="btn btn-download" disabled>
+                <a href="#">Download</a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script> -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
